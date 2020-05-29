@@ -39,8 +39,9 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{78F87F6E-3EEF-418C-BABD-B9DA6AE2EFEB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>HW3Segmentation</RootNamespace>
+    <RootNamespace>Segmentation</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Segmentation</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
