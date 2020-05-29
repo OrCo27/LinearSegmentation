@@ -9,6 +9,19 @@
 #define MIN_CLUSTER 6
 #define SIM_THRESHOLD 0.7
 
+void WriteSummaryFileHeader(ofstream& ofile, vector<string> files_path)
+{
+    ofile << "Summary Of All Viruses In The Following Order: (";
+    for (int i = 0; i < files_path.size(); i++)
+    {
+        string file_name = Utils::GetFileName(files_path[i]);
+        ofile << file_name;
+
+        if (i != files_path.size() - 1)
+            ofile << ", ";
+    }
+    ofile << ")" << endl;
+}
 
 int main()
 {
@@ -21,16 +34,7 @@ int main()
     ofile.open(output_file);
 
     /* Write to summary file the names as header */
-    ofile << "Summary Of All Viruses In The Following Order: (";
-    for (int i = 0; i < files_path.size(); i++)
-    {
-        string file_name = Utils::GetFileName(files_path[i]);
-        ofile << file_name;
-        
-        if (i != files_path.size() - 1)
-            ofile << ", ";
-    }
-    ofile << ")" << endl;
+    WriteSummaryFileHeader(ofile, files_path);
 
     /* Pass on each file an perform clustering algorithm */
     for (const string& file : files_path)
