@@ -149,7 +149,7 @@ void ClusterAlg::CalcSimThreshold()
     for (int i = 0; i < scores.size() - 1; i++)
     {
         curr_diff = scores[i] - scores[i + 1];
-        if (curr_diff > 0.01)
+        if (curr_diff > EPS)
         {
             sim_threshold = scores[i + 1];
             break;

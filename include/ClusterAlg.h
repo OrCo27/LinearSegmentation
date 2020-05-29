@@ -6,6 +6,9 @@
 #include "Boundary.h"
 #include <unordered_map>
 #include <algorithm>
+
+#define EPS 0.01
+
 using namespace std;
 
 class ClusterAlg
