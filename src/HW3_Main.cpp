@@ -4,9 +4,9 @@
 #include "SectionCollection.h"
 #include "ClusterAlg.h"
 
-#define SECTION_SIZE 50 
+#define SECTION_SIZE 100
 #define NGRAM_SIZE 3
-#define MIN_CLUSTER 6
+#define MIN_CLUSTER 10
 #define SIM_THRESHOLD 0.7
 
 void WriteSummaryFileHeader(ofstream& ofile, vector<string> files_path)
