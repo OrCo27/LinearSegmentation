@@ -19,6 +19,8 @@ public:
     static string GetFileString(const string& fileName, bool include_header);
     /* Get content of file into lines save on vector of strings */
     static vector<string> GetFileLines(const string& fileName);
+    /* Extract only the file name from file path */
+    static string GetFileName(const string& filePath);
     /* Check if map file is already exists */
     static bool FileIsExists(const string& fileName);
 };

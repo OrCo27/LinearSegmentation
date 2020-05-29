@@ -23,5 +23,5 @@ public:
 	void BuildCollection();
 	vector<int> GetSection(int index);
 	size_t GetTotalSections();
-	string GetFileName();
+	string GetFilePath();
 };

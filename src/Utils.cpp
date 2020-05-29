@@ -43,6 +43,13 @@ vector<string> Utils::GetFileLines(const string& fileName)
     return lines;
 }
 
+string Utils::GetFileName(const string& filePath)
+{
+    size_t firstindex = filePath.find_first_of("/");
+    size_t lastindex = filePath.find_last_of(".");
+    return filePath.substr(firstindex + 1, lastindex - firstindex - 1);
+}
+
 bool Utils::FileIsExists(const string& fileName)
 {
     ifstream infile(fileName);

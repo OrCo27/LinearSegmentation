@@ -50,6 +50,11 @@ void SectionCollection::BuildSections(const string& input_text, size_t input_siz
     }
 }
 
+string SectionCollection::GetFilePath()
+{
+    return file_name;
+}
+
 size_t SectionCollection::GetTotalSections()
 {
     return sections_vectors.size();
@@ -58,12 +63,6 @@ size_t SectionCollection::GetTotalSections()
 vector<int> SectionCollection::GetSection(int index)
 {
     return sections_vectors[index];
-}
-
-string SectionCollection::GetFileName()
-{
-    size_t lastindex = file_name.find_last_of(".");
-    return file_name.substr(0, lastindex);
 }
 
 void SectionCollection::BuildCollection()
