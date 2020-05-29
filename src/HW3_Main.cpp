@@ -26,11 +26,9 @@ void WriteSummaryFileHeader(ofstream& ofile, vector<string> files_path)
 int main()
 {
     vector<string> files_path = { "input/sc.fasta", "input/sars.fasta", "input/Mers.fasta" };
-    map<string, vector<Boundary>> clusters_result;
-    vector<Boundary> result;
-
     string output_file = "output/summary.txt";
     ofstream ofile;
+    
     ofile.open(output_file);
 
     /* Write to summary file the names as header */
@@ -50,10 +48,6 @@ int main()
         /* Save result to file */
         alg.SaveResultToFile();
         alg.AddToSummaryResultFile(ofile);
-
-        /* Get vector result and save it into map files */
-        result = alg.GetClustersResult();
-        clusters_result[file] = result;
     }
 
     ofile.close();
