@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SIMILARITY_H
+#define SIMILARITY_H
 
 #include <unordered_map>
 #include "SectionCollection.h"
@@ -19,3 +20,5 @@ public:
 	Similarity(const SectionCollection& sections);
 	double CalcSimilarScore(int first_index, int second_index);
 };
+
+#endif

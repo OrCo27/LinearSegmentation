@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CLUSTERALG_H
+#define CLUSTERALG_H
 
 #include "SectionCollection.h"
 #include "Similarity.h"
@@ -33,3 +34,5 @@ public:
 	void AddToSummaryResultFile(ofstream& ofile);
 	vector<Boundary> GetClustersResult();
 };
+
+#endif

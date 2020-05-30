@@ -1,4 +1,5 @@
-#pragma once
+#ifndef BOUNDARY_H
+#define BOUNDARY_H
 
 class Boundary
 {
@@ -13,3 +14,5 @@ public:
     void DisableBoundary();
     bool IsActive();
 };
+
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SECTIONS_H
+#define SECTIONS_H
 
 #include <string>
 #include <unordered_map>
@@ -25,3 +26,5 @@ public:
 	size_t GetTotalSections();
 	string GetFilePath();
 };
+
+#endif

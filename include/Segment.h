@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SEGMENT_H
+#define SEGMENT_H
 
 #include <vector>
 #include "Similarity.h"
@@ -27,3 +28,5 @@ public:
 	void ShiftRightSegment();
 	double GetInternalScore();
 };
+
+#endif
